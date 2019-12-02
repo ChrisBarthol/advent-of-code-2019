@@ -20,3 +20,12 @@ fn main() {
 fn fuel_needed_for(item: f64) -> f64 {
     (item/3.0).floor()-2.0
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn it_works() {
+        assert_eq!(2.0, fuel_needed_for(14.0));
+    }
+}
